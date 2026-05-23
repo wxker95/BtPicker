@@ -38,7 +38,7 @@ jobs:
 
       - name: Zip
         if: steps.check.outputs.exists == 'false'
-        run: Compress-Archive -Path publish\* -DestinationPath BtPicker-win-x64.zip
+        run: Compress-Archive -Path publish\BtPicker.exe -DestinationPath BtPicker-win-x64.zip
 
       - name: Create release
         if: steps.check.outputs.exists == 'false'
